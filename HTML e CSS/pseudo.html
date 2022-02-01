@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>links</title>
+    <style>
+        /*
+            # = id
+            . = class 
+            : = pseudo-class
+            :: = pseudo-elemento
+            > = clildren
+        */
+        body {
+            font-family: arial,helvetica, sans-serif;
+        }
+
+        a {
+            color: rgb(47, 0, 255);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /*Ao link ser visitado ficara darkred*/
+        a:visited {
+            color:darkred;
+        }
+
+        /*Ao passar o mouse por cima ficara preto e com uma linha em baixo*/
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        /*Enquanto estiver clicando ficara amarelo*/
+        a:active {
+            color: yellow;
+        }
+
+        a::after {
+            content: '  link';
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgray
+        }
+        
+        .especial {
+            background-color: palevioletred;
+        }
+
+        .especial::before {
+            content: '↣ '
+        }
+
+        .especial::after {
+            content: ' ↤'
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href='https://www.instagram.com/andersonmnt/' target="_blank">Meu instagram</a></li>
+        <li><a href="https://www.twitch.tv/yoda" target="_blank" class="especial">twitch Yodinha </a></li>
+        <li><a href="https://marketplace.thetanarena.com/profile?tab=wallet" target="_blank">Meu perfil no thetanarena</a></li>
+    </ul>
+</body>
+</html>

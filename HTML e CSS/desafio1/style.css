@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+
+:root { /*Criando variaveis de cor e fonte para pag*/
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, verdana, helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+
+* { /*Para reseta as configuraçoes globais de margim e paddin da pag*/
+    margin: 0px; /*Margim 0 global */
+    padding: 0px; /*PAdin 9 global */
+}
+
+
+body { /* Definições do corpo da pagina */
+    background-color: var(--cor0); /* Cor de fundo */
+    font-family: var(--fonte-padrao); /* Fonte padrão da página */
+}
+
+a.externo::after {
+    content: '\1F517';
+}
+
+header { /* Definições do cabeçario */
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5)); /* Criando um degrade para o fundo do cabeçario*/
+    min-height: 150px; /* Tamanho minimo do cabeçario*/
+    text-align: center; /* Alinhamento no centro dos textos*/
+    padding-top: 40px; /* distancia do conteudo para o resto no topo*/
+}
+
+header > h1 { /* Definições do h1 no cabeçario */
+    color: white; /* Cor da letra */
+    font-family: var(--fonte-destaque); /* Fonte do h1*/
+    font: size 3em; /* Tamanho da fonte */
+    font-weight: normal; /* Deixar a fonte sem nada */
+    margin-bottom: 20px; /* Cria uma margem embaixo do h1 */
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.486); /* Cria uma sombra no h1 */
+}
+
+header > p { /* Definições do p no cabeçario */
+    font-family: var(--fonte-padrao); /* Fonte do p */
+    font: size 1.2em; /* Tamnaho da fonte */
+    color: white; /* Cor da fonte */
+    max-width: 500px; /* Tamanho maximo da p*/
+    padding-left: 10px; /* distancia do conteudo para o lado direito */
+    padding-right: 10px; /* Distancia do conteudo para o lado esquerdo*/
+    margin: auto; /* Para centralizar o elementos p */
+    margin-bottom: 15px; /* Para cria uma margim embaixo do p*/
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.486); /* Coloca uma sobra no p*/
+}
+
+nav { /* Definiçoes para o menu da pag */
+    background-color: var(--cor5); /* Cor de fundo do menu */
+    padding: 10px; /* Distancia do conteudo para fora*/
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.541); /* Sombra do menu*/
+}
+
+nav > a { /* Definiçoes para os links do menu*/
+    color: var(--cor1); /* Cor das letras*/
+    padding: 10px; /* Distancia dos links para as bordas */ 
+    text-decoration: none; /* Tirar a decorção dos links */
+    font-weight: bold; /* Deixar a fonte em negrito */ 
+    border-radius: 4px; /* Criar uma redondamento nas boradas dos links*/
+    transition-duration: 0.5s; /* aumentar a duração da transição */
+}
+
+nav > a:hover { /* Ao passar o mouse por cima dos links */
+    background-color: var(--cor2); /* Cor que vai aparecer ao passar por cima*/
+    color: var(--cor4); /* Cor que a fonte ficara ao passar por cima*/
+    
+}
+ 
+main { /* Conteudo principal da pagina */
+    background-color: white; /* Cor que tera o fundo do conteudo */
+    min-width: 300px; /* Tamanho minimo que tera o fundo do conteudo */
+    max-width: 1000px; /* Tamanho maximo que tera o fundo do conteudo */
+    padding: 20px; /* Distqncia que tera o conteudo para a borada */
+    margin: auto; /* Centralizar o conteudo */
+    margin-bottom: 30px; /* Criar uma margim embaixo */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.459); /* Criar uma sombra noi fundo da caixa main*/
+    border-bottom-left-radius: 10px; /* Criar uma borda na parte inferior direita*/
+    border-bottom-right-radius: 10px; /* criar uma borda na parte inferior esquerda*/
+}
+
+main > img { /* Define o tamanho das imagens na main */
+    width: 100%; /* Fará sempre ocupar 100% do elemento, quando for esticado ou encurtado*/
+}
+
+main img.pequena { /* Configuração das imagens pequenas*/
+    max-width: 350px; /*Tamanho maximo das imagens pequenas*/
+    margin: auto; /* Centralizar as imagens*/
+    display: block; /* Faz as imagnes renderizar como bloco */
+}
+
+main h1 { /* Configuração do titulo do main*/
+    color: var(--cor5); /* Cor do h1*/
+    font-family: var(--fonte-android); /* Fonte do h1*/
+    font-size: 1.8em; /* tamanho da fonte */
+}
+
+main h2 { /* Configuração do titulo2 do main*/
+    font-family: var(--fonte-android); /* Tipo da fonte*/
+    font-weight: normal; /* Deixar a fonte sem nada*/
+    color: var(--cor4); /* Cor da fonte*/
+    font: size 1.3em; /* Tamanho da fonte*/
+    background-image: linear-gradient(to right,var(--cor0),transparent); /* Cria uma fundo gradiente no h2*/
+}
+
+main p { /* Configuração dos paragrafos da seção main */
+    margin: 15px 0px; /* Cria um espaçamento entre o páragrafo e o título*/
+    text-align:justify; /* Para deixar o texto todo justificado*/
+    text-indent: 30px; /* Recuo do inicio de cada parágrafo*/
+    font-size: 1em; /* Define o tamanho da fonte*/
+    line-height: 1em; /* Define o espaçamento entre uma linha e outra de texto*/
+}
+
+main strong { /* Configuração do do negrito da seção main */
+    color: var(--cor4); /* Cor da fonte */
+    font-weight: bold; /* Coloca o texto definido em negrito */
+}
+
+main a { /* Configuração dos links da main*/
+    text-decoration: none; /* Retira a decoração pré definida dos links*/ 
+    color: var(--cor4); /* Cor da letra  */
+    font-weight: bold; /* Coloca o texto definido em negrito */
+    background-color: var(--cor1); /* Define a cor desejada para o fundo do link*/
+    padding: 2px 6px; /* Define uma distancia do link para os outros elementos*/
+}
+
+main a:hover { /* Configuração dos links ao passar o mouse por cima da main*/
+    text-decoration:underline; /* Coloca uma linha embaixo do link ao passar o mouse*/
+    color: var(--cor4) /*Cor ao passar o mouse*/
+}
+
+div.video { /* configuraçoes da classe video na div*/
+    background-color: var(--cor5); /* Cor do fundo*/
+    margin: 0px -20px 30px -20px; /* Cria uma margim na direita em baixo e na esquerda*/
+    padding: 20px; /* Distancia do conteudo para a borda*/
+    padding-bottom: 57%; /* Distancia do conteudo para a borda de baixo*/
+    position: relative; /* Determina que o elemnto será posicionado de acordo com o fluxo da pagina */
+}
+
+div.video > iframe { 
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside { /* Configuração do aside */
+    background-color: var(--cor1); /* Cor de fundo*/
+    padding: 10px;  /* Criando uma distancia para o conteudo do aside*/
+    border-radius: 10px; /* Bordas arredondadas nos 4 lados*/
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.541); /* Sombra para o aside*/
+}
+
+aside > h3 { /* Configuração do h3 doaside */
+    background-color: var(--cor4); /* Colocando uma cor no fundo da imagem*/
+    color: white; /* Cor da letra*/
+    padding: 10px;  /* Distancia do h3 para o conteúdo da pagina */
+    margin: -10px -10px 0 -10px; /* Para fazer a margim do h3 vazar para fora */
+    border-radius: 10px 10px 0px 0px; /* Para arredondar somente as partes de cima*/
+}
+
+
+aside > lu { /* Configuração da lista */
+    list-style-position: inside; /* Deixar os pontos para dentro do background*/
+    list-style-type: '\2714 '; /* Colocar o emoj de check*/
+
+}
+
+footer { /* Configuração do roda pé da pagina*/
+    background-color: var(--cor5); /* Cor de fondo do roda pé */
+    color: white; /* cor da fonte */
+    text-align: center; /* A linhar o texto no centro*/
+    font-size: 0.8em; /* tamanho da fonte */
+    padding: 5px; /* Distancia do roda pé e o conteúdo*/
+}
+
+footer a { /* Configuração dos links do pé da pagina*/
+    color: white; /* Cor da letra */
+    font-weight: bold; /* Negrito no links */ 
+    text-decoration: none; /* Tirar a decoração pré definida*/ 
+}
+
+footer a:hover { /* Configuração dos links do pagina ao passar o mouse*/
+    text-decoration: underline; /* Ao passar o mouse decorar com uma linha em baixo*/
+    color: var(--cor1); /* Cor da letra ao passar o mouse*/
+}

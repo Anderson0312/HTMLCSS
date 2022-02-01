@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    body {
+        text-align: center;
+        font: normal 30px sans;
+    }
+
+    .tracking-out-contract {
+        -webkit-animation: tracking-out-contract 1.7s infinitecubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+                animation: tracking-out-contract 1.7s infinite cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
+ 
+    @-webkit-keyframes tracking-out-contract {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    }
+    @keyframes tracking-out-contract {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    }
+
+    </style>
+</head>
+<body>
+    <h1 class="tracking-out-contract">Testando</h1>
+</body>
+</html>
